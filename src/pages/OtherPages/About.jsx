@@ -1,19 +1,12 @@
+import React from 'react'
+import "./styles/About.css";
 
-
-import { motion } from "framer-motion";
-import "./Home.css";
-
-
-const Home = () => {
+function About() {
   return (
-    <motion.div
-      className="home-page"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -40 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+    <div  
+    className='about-page'
     >
-      <h1>Main Portfolio Page</h1>
+      <h1>About Page</h1>
       <p>Header, sections, footer will come here</p>
       <br />
       <p>Header, sections, footer will come here</p>
@@ -64,8 +57,9 @@ const Home = () => {
       <br /><p>Header, sections, footer will come here</p>
       <br /><p>Header, sections, footer will come here</p>
       <br />
-    </motion.div>
-  );
-};
+      
+    </div>
+  )
+}
 
-export default Home;
+export default About

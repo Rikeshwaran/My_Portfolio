@@ -55,7 +55,14 @@ const Welcome = () => {
   }, [navigate]);
 
   return (
-    <div className="welcome-container">
+    <motion.div
+        className="welcome-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0, y: -40 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+      >
+
 
       {/* LEFT TEXT */}
       <div className="content">
@@ -78,7 +85,7 @@ const Welcome = () => {
         <RobotScene />
       </motion.div>
 
-    </div>
+    </motion.div>
   );
 };
 

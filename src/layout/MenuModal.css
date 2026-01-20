@@ -1,0 +1,28 @@
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.menu-panel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #020617;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.menu-panel button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  text-align: left;
+}
