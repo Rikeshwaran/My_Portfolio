@@ -7,53 +7,62 @@
   color: white;
   align-items: center;
   justify-content: center;
-  padding: 0px;
   overflow: hidden;
 }
 
-.welcome-text {
-  padding: 20px;
-}
-
-/* TEXT */
+/* TEXT AREA */
 .content {
-  text-align: center;
   z-index: 2;
   padding: 20px;
+  text-align: center;
+  width: 420px;
+  max-width: 90%;
 }
-.content h1 {
-  font-size: 3.2rem; /* base */
+
+.typing-line {
+  font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 12px;
+  min-height: 3.2rem;
+  white-space: nowrap;
 }
 
-.content h2 {
-  font-size: 1.6rem;
-  color: #38bdf8;
-  font-weight: 500;
-}
-
-.content p {
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
+/* ROBOT */
 .robot {
-  border: #fefefe solid 2px;
   width: 100%;
-  height: 60vh;      
-  max-width: 600px;
-  min-height: 350px;
+  height: 45vh;
+  max-width: 100%;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .typing-line {
+    font-size: 1.6rem;
+    white-space: normal; 
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .robot {
+    height: 35vh;
+    min-height: 220px;
+  }
 }
 
 /* DESKTOP */
 @media (min-width: 768px) {
   .welcome-container {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 6%;
   }
 
   .content {
@@ -63,17 +72,5 @@
   .robot {
     height: 70vh;
     max-width: 780px;
-  }
-}
-.content h1 {
-  animation: glow 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px rgba(56,189,248,0.3);
-  }
-  to {
-    text-shadow: 0 0 30px rgba(56,189,248,0.8);
   }
 }

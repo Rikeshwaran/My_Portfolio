@@ -25,10 +25,12 @@ const RobotModel = () => {
 const RobotScene = () => {
   return (
     <Canvas
-      style={{ width: "100%", height: "100%" }}
-      camera={{ position: [1.0, 1.8, 4.5], fov: 45 }}
-    >
-
+        style={{ width: "100%", height: "100%" }}
+        camera={{
+          position: window.innerWidth < 600 ? [0, 1.4, 3.8] : [1.0, 1.8, 4.5],
+          fov: window.innerWidth < 600 ? 55 : 45
+        }}
+      >
       <ambientLight intensity={1.2} />
       <directionalLight position={[3, 3, 3]} />
       <RobotModel />
