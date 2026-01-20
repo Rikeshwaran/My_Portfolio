@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import MenuModal from "./Menumodal";
+import MenuModal from "./MenuModal";
 import "./Header.css";
 
 const Header = ({ currentIndex, pages , onMenuToggle }) => {
