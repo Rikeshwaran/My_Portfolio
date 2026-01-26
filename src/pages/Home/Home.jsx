@@ -54,7 +54,7 @@ const Home = () => {
           </a>
 
           <a href="/resume" className="btn-alt">
-            View Resume 📄
+            View Resume 
           </a>
         </div>
       </motion.div>

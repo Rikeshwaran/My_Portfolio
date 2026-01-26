@@ -82,3 +82,29 @@ body::after {
     transform: translate(-20px, 30px) scale(0.9);
   }
 }
+html {
+  background: #000 !important;
+}
+
+body {
+  background: #000 !important;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: env(safe-area-inset-bottom);
+  background: #000;
+  z-index: 999999;
+  pointer-events: none;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
