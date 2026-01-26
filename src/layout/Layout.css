@@ -14,7 +14,7 @@
 .fixed-nav {
   position: fixed;
   right: 16px;
-  bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   display: flex;
   
   gap: 12px;
