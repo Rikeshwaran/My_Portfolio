@@ -10,7 +10,7 @@ const Welcome = () => {
   const texts = [
     "Welcome to my page !...",
     "Hi, I'm Rikeshwaran ",
-    "Let's explore more about me..."
+    "Let's explore more about me !..."
   ];
 
   const [displayText, setDisplayText] = useState("");

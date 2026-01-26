@@ -9,6 +9,7 @@
 .content-scroll {
   -ms-overflow-style: none;
 }
+
 /* Floating navigation container */
 .fixed-nav {
   position: fixed;

@@ -12,7 +12,50 @@ html, body, #root {
 }
 
 body {
-  background: #0f172a;
+  
+  background: radial-gradient(circle at top, #0f172a, #000);
   color: #e5e7eb;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Glow Orbs */
+.glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  animation: orbFloat 15s infinite ease-in-out;
+  z-index: 0;
+}
+
+.orb1 {
+  width: 300px;
+  height: 300px;
+  background: cyan;
+  top: 10%;
+  left: 5%;
+}
+
+.orb2 {
+  width: 250px;
+  height: 250px;
+  background: purple;
+  bottom: 15%;
+  right: 10%;
+  animation-delay: -3s;
+}
+
+.orb3 {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  top: 40%;
+  right: 35%;
+  animation-delay: -6s;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.1); }
+  66% { transform: translate(-20px, 30px) scale(0.9); }
 }

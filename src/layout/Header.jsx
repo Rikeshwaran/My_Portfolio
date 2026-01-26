@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-
-import MenuModal from "./MenuModal";
+import MenuModal from "../components/Welcome/MenuModal";
 import "./Header.css";
 
 const Header = ({ currentIndex, pages , onMenuToggle }) => {
@@ -33,14 +32,12 @@ const Header = ({ currentIndex, pages , onMenuToggle }) => {
             className="menu-btn" 
             onClick={() => {
               setOpen(true);
-               onMenuToggle(true)
                }
                }>☰</div>
       </header>
       <AnimatePresence>
         {open && <MenuModal close={() => {
           setOpen(false);
-          onMenuToggle(false);
         }} />}
 
       </AnimatePresence>

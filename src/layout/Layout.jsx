@@ -30,8 +30,8 @@ const Layout = () => {
         className="content-scroll"
         key={location.pathname}
         style={{
-          height: "calc(100vh - 80px)",
-          marginTop: "80px",
+          height: "calc(100vh - 0px)",
+          marginTop: "60px",
           position: "relative",
           overflow: "auto"
         }}
